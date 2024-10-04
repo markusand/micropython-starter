@@ -1,0 +1,22 @@
+[project]
+name = "micropython-starter"
+description = "MicroPython starter project"
+version = "0.1.0"
+keywords = ["micropython"]
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Marc Vilella", email = "mvilella.and@gmail.com"},
+]
+
+[project.urls]
+Repository = "https://github.com/markusand/micropython-starter"
+Issues = "https://github.com/markusand/micropython-starter/issues"
+
+[tool.pylint]
+ignore = ["__pycache__", ".venv", "typings"]
+init-hook = "import sys; sys.path.append('typings')"
+
+[tool.pylint.master]
+# Ignore missing import errors if stubs are incomplete. 'F0401' is the error code for 'unable to import'
+disable = ["F0401"]
